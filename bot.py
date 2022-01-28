@@ -52,7 +52,7 @@ async def HelpWatermark(bot, cmd):
 	await cmd.reply_text(
 		text=Config.USAGE_WATERMARK_ADDER,
 		parse_mode="Markdown",
-		reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Developer", url="http://t.me/VideosWaterMarkRobot"), InlineKeyboardButton("Support Group", url="http://t.me/VideosWaterMarkRobot")], [InlineKeyboardButton("Bots Channel", url="http://t.me/VideosWaterMarkRobot")], [InlineKeyboardButton("Source Code", url="https://github.com/ZmRAJA/WatermarkBot")]]),
+		reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Developer", url="http://t.me/jettastic"), InlineKeyboardButton("Support Group", url="http://t.me/jetbots_support")], [InlineKeyboardButton("Bots Channel", url="http://t.me/jetbots")], [InlineKeyboardButton("Source Code", url="https://t.me/jettastic")]]),
 		disable_web_page_preview=True
 	)
 
@@ -304,7 +304,7 @@ async def VidWatermarkAdder(bot, cmd):
 				await logs_msg.edit("Successfully Uploaded File to Streamtape!\n\nI am Free Now!", parse_mode="Markdown", disable_web_page_preview=True)
 		except Exception as e:
 			print(f"Error: {e}")
-			await editable.edit("Sorry, Something went wrong!\n\nCan't Upload to Streamtape. You can report at [Support Group](https://t.me/VideosWaterMarkRobot).")
+			await editable.edit("Sorry, Something went wrong!\n\nCan't Upload to Streamtape. You can report at [Support Group](https://t.me/jetbots_support).")
 			await logs_msg.edit(f"Got Error While Uploading to Streamtape!\n\nError: {e}")
 		await delete_all()
 		return
@@ -387,7 +387,7 @@ async def button(bot, cmd: CallbackQuery):
 				user = await bot.get_chat_member(int(Config.UPDATES_CHANNEL), cmd.message.chat.id)
 				if user.status == "kicked":
 					await cmd.message.edit(
-						text="Sorry Sir, You are Banned to use me. Contact my [Support Group](https://t.me/VideosWaterMarkRobot).",
+						text="Sorry Sir, You are Banned to use me. Contact my [Support Group](https://t.me/jetbots_support).",
 						parse_mode="markdown",
 						disable_web_page_preview=True
 					)
@@ -410,7 +410,7 @@ async def button(bot, cmd: CallbackQuery):
 				return
 			except Exception:
 				await cmd.message.edit(
-					text="Something went Wrong. Contact my [Support Group](https://t.me/VideosWaterMarkRobot).",
+					text="Something went Wrong. Contact my [Support Group](https://t.me/jetbots_support).",
 					parse_mode="markdown",
 					disable_web_page_preview=True
 				)
@@ -418,7 +418,7 @@ async def button(bot, cmd: CallbackQuery):
 		await cmd.message.edit(
 			text=Config.USAGE_WATERMARK_ADDER,
 			parse_mode="Markdown",
-			reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Developer", url="https://t.me/VideosWaterMarkRobot"), InlineKeyboardButton("Support Group", url="https://t.me/DevsZone")], [InlineKeyboardButton("Bots Channel", url="https://t.me/VideosWaterMarkRobot")]]),
+			reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Developer", url="https://t.me/jettastic"), InlineKeyboardButton("Support Group", url="https://t.me/jtbots_support")], [InlineKeyboardButton("Bots Channel", url="https://t.me/jetbots")]]),
 			disable_web_page_preview=True
 		)
 
@@ -435,7 +435,7 @@ async def button(bot, cmd: CallbackQuery):
 				user = await bot.get_chat_member(int(Config.UPDATES_CHANNEL), cmd.message.chat.id)
 				if user.status == "kicked":
 					await cmd.message.edit(
-						text="Sorry Sir, You are Banned to use me. Contact my [Support Group](https://t.me/VideosWaterMarkRobot).",
+						text="Sorry Sir, You are Banned to use me. Contact my [Support Group](https://t.me/jetbots_support).",
 						parse_mode="markdown",
 						disable_web_page_preview=True
 					)
@@ -458,7 +458,7 @@ async def button(bot, cmd: CallbackQuery):
 				return
 			except Exception:
 				await cmd.message.edit(
-					text="Something went Wrong. Contact my [Support Group](https://t.me/VideosWaterMarkRobot).",
+					text="Something went Wrong. Contact my [Support Group](https://t.me/jetbots_support).",
 					parse_mode="markdown",
 					disable_web_page_preview=True
 				)
